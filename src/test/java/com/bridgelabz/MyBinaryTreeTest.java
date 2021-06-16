@@ -1,7 +1,16 @@
 package com.bridgelabz;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class MyBinaryTreeTest {
-    public static void main(String[] args) {
-        System.out.println("welcome binary tree data structure");
+    @Test
+    public void given3Numbers_WhenAddedToBST_ShouldReturnSize() {
+        MyBinaryTree<Integer> myBinaryTree = new MyBinaryTree<>();
+        myBinaryTree.add(56);
+        myBinaryTree.add(30);
+        myBinaryTree.add(70);
+        int size = myBinaryTree.getSize();
+        Assert.assertEquals(3,size);
     }
 }
